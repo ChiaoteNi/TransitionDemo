@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="66M-JS-KYC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vJ6-L6-H8I">
+            <objects>
+                <tabBarController id="66M-JS-KYC" customClass="TabBarController" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ban-hy-Lem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5bW-B1-zn6" kind="relationship" relationship="viewControllers" id="Dvw-Me-MCy"/>
+                        <segue destination="aKX-h6-OWi" kind="relationship" relationship="viewControllers" id="J3I-3n-9cG"/>
+                        <segue destination="z9m-66-bn2" kind="relationship" relationship="viewControllers" id="YEU-BN-HuU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96U-kI-SWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1223" y="519"/>
+        </scene>
+        <!--第二頁-->
+        <scene sceneID="Aae-sj-QVw">
+            <objects>
+                <viewController title="第二頁" id="aKX-h6-OWi" customClass="FirstTabVC" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Al1-fG-E5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.7944146659200273" green="0.68780424679603791" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="ScH-xE-Dpo"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="otQ-DR-p2X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMl-Ks-gdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="476"/>
+        </scene>
+        <!--第一頁-->
+        <scene sceneID="A5X-5t-ddE">
+            <objects>
+                <viewController title="第一頁" id="5bW-B1-zn6" customClass="FirstVC" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kHc-3d-ZM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP4-C1-du7">
+                                <rect key="frame" x="134" y="392" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ModallyPresent"/>
+                                <connections>
+                                    <action selector="presentSecVC" destination="5bW-B1-zn6" eventType="touchUpInside" id="xGd-7E-JSo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.86567017858059003" blue="0.41385454398361143" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="L7a-YR-ZyQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="P1d-Sf-pcP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlY-0o-3kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-215"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="a4J-3v-IyO">
+            <objects>
+                <navigationController id="z9m-66-bn2" customClass="NavigationController" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xsz-uj-XVS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Sc-zn-DLE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pt9-mu-vbs" kind="relationship" relationship="rootViewController" id="edC-Oy-grH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYH-B8-ZNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="1178"/>
+        </scene>
+        <!--第三頁-->
+        <scene sceneID="aO7-qj-QeU">
+            <objects>
+                <viewController title="第三頁" id="Pt9-mu-vbs" customClass="FirstNaviDemoVC" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iN2-ar-aFA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UG-G9-vJw">
+                                <rect key="frame" x="164" y="410" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="presentSecVC" destination="Pt9-mu-vbs" eventType="touchUpInside" id="h4K-mX-txe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.53137434110765835" blue="0.55259319811623553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="bPj-yQ-sjj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qQ9-CU-Kv3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1C-mo-pO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="1178"/>
+        </scene>
+        <!--第一頁-->
+        <scene sceneID="7gT-is-y7W">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" title="第一頁" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOW-40-j4q" customClass="SecondVC" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UsA-iB-iRE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.52734844478172926" green="0.74520586191275395" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="w3K-g3-LLB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9Sn-px-1zm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uC-Hs-Tp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-215"/>
+        </scene>
+        <!--第一頁-->
+        <scene sceneID="6F2-gL-7kD">
+            <objects>
+                <viewController storyboardIdentifier="SecNaviDemoVC" title="第一頁" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UXB-58-DdR" customClass="SecNaviDemoVC" customModule="TransitionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CML-Ba-I9P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.36349091250991306" blue="0.58602375346380453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Ndk-fs-u4g"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1pB-jB-CTg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egT-WU-e91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="475"/>
+        </scene>
+    </scenes>
+</document>
